@@ -27,3 +27,21 @@ MODIFY COLUMN Mail VARCHAR(2000) NOT NULL;
 INSERT INTO Department(DEPTNAME,BULDING,ROOMNO,BUDGET) 
 VALUES('Biology','Watson','100',90000),
 ('Comp. Sci.','Taylor','200',100000);
+
+--add primary key after creating table
+ALTER TABLE Department
+ADD PRIMARY KEY (DeptName);
+--add foreign key after creating table
+ALTER TABLE Student
+ADD FOREIGN KEY (DeptName) REFERENCES Department(DeptName);
+---remove primary key
+ALTER TABLE Department
+DROP PRIMARY KEY;
+DROP CONSTRAINT Department_ibfk_1;
+
+--trstr 
+
+ALTER TABLE mydb.`cwd_group`
+    MODIFY `active` varchar(12) 
+   ,MODIFY `local`  varchar(25) 
+;
