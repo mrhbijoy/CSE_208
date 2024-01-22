@@ -12,7 +12,18 @@ CREATE TABLE Department (
 CREATE TABLE Student (
     StudentID INT NOT NULL,
     StudentName VARCHAR(50) NOT NULL,
+    Email VARCHAR(50) NOT NULL,
     DeptName VARCHAR(50) NOT NULL,
     PRIMARY KEY (StudentID),
     FOREIGN KEY (DeptName) REFERENCES Department(DeptName)
 );
+--alter student table
+ALTER TABLE Student
+DROP COLUMN Email
+ADD COLUMN Mail VARCHAR(50) NOT NULL
+MODIFY COLUMN Mail VARCHAR(2000) NOT NULL;
+
+--inserting values into department table
+INSERT INTO Department(DEPTNAME,BULDING,ROOMNO,BUDGET) 
+VALUES('Biology','Watson','100',90000),
+('Comp. Sci.','Taylor','200',100000);
