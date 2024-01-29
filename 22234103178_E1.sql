@@ -34,7 +34,7 @@ CREATE TABLE Student(
     blood_group VARCHAR(3) NOT NULL,
     department_name VARCHAR(20) NOT NULL,
     mobile_number VARCHAR(10) NOT NULL,
-    PRIMARY KEY(ID)
+    CONSTRAINT PRIMARY KEY(ID)
 );
 
 CREATE TABLE Grades(
